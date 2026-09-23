@@ -3,62 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validador RegEx - UDB</title>
+    <title>Expresiones Regulares (RegEx) - UDB</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts para un estilo más dinámico y moderno tipo cómic/editorial -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Registro Estudiantil (RegEx en Acción)</h1>
-            <p>Demostración práctica de validación de datos usando Expresiones Regulares.</p>
+    <div class="page-wrapper">
+        <header class="main-header">
+            <span class="badge-udb">UNIVERSIDAD DON BOSCO, FACULTAD DE INGENIERÍA</span>
+            <h1>EXPRESIONES REGULARES (RegEx)</h1>
+            <p class="author-info">Alexis Antonio Hernandez Borja HB240784 LIC2026</p>
         </header>
 
-        <main>
-            <!-- Formulario de Validación -->
-            <section class="card form-section">
-                <h2>Validador de Datos</h2>
-                <form id="registroForm">
-                    <div class="input-group">
-                        <label for="carnet">Carnet (Ej. HB240784):</label>
-                        <input type="text" id="carnet" placeholder="2 letras seguidas de 6 números">
-                        <span class="feedback" id="carnetFeedback"></span>
-                    </div>
+        <main class="content-container">
+            <!-- Sección de Validación Interactiva -->
+            <section class="comic-card card-form">
+                <div class="card-header turquoise">
+                    <h2>VALIDADOR INTERACTIVO</h2>
+                </div>
+                <div class="card-body">
+                    <p class="instruction">Prueba el funcionamiento de las RegEx ingresando los datos correspondientes:</p>
+                    <form id="registroForm">
+                        <div class="input-group">
+                            <label for="carnet">Carnet Universitario (Ej. AB123456):</label>
+                            <input type="text" id="carnet" placeholder="2 letras y 6 números">
+                            <span class="feedback" id="carnetFeedback"></span>
+                        </div>
 
-                    <div class="input-group">
-                        <label for="correo">Correo Electrónico:</label>
-                        <input type="text" id="correo" placeholder="ejemplo@correo.com">
-                        <span class="feedback" id="correoFeedback"></span>
-                    </div>
+                        <div class="input-group">
+                            <label for="correo">Correo Electrónico:</label>
+                            <input type="text" id="correo" placeholder="ejemplo@correo.com">
+                            <span class="feedback" id="correoFeedback"></span>
+                        </div>
 
-                    <div class="input-group">
-                        <label for="password">Contraseña Fuerte:</label>
-                        <input type="password" id="password" placeholder="Mín. 8 caracteres, 1 mayúscula, 1 número">
-                        <span class="feedback" id="passwordFeedback"></span>
-                    </div>
+                        <div class="input-group">
+                            <label for="password">Contraseña Fuerte:</label>
+                            <input type="password" id="password" placeholder="Min. 8 carac., 1 mayús., 1 número">
+                            <span class="feedback" id="passwordFeedback"></span>
+                        </div>
 
-                    <button type="submit">Probar Expresiones Regulares</button>
-                </form>
+                        <button type="submit" class="comic-button">PROBAR EXPRESIONES</button>
+                    </form>
+                </div>
             </section>
 
-            <!-- Sección de Investigación Requerida -->
-            <section class="card info-section">
-                <h2>Resumen de Investigación</h2>
-                <div class="info-grid">
-                    <div>
-                        <h3>¿Qué son y su importancia?</h3>
-                        <p>Son secuencias de caracteres que forman patrones de búsqueda. Son vitales para validar, buscar y manipular texto de forma eficiente y segura, evitando validaciones manuales extensas.</p>
+            <!-- Sección de Resumen Teórico (Basado en la infografía) -->
+            <section class="comic-card card-theory">
+                <div class="card-header orange">
+                    <h2>CONCEPTOS CLAVE</h2>
+                </div>
+                <div class="card-body theory-grid">
+                    <div class="theory-box">
+                        <h3>¿Qué es RegEx?</h3>
+                        <p>Definen secuencias de caracteres para búsqueda exhaustiva de texto y patrones complejos.</p>
                     </div>
-                    <div>
+                    <div class="theory-box">
+                        <h3>¿Por qué son importantes?</h3>
+                        <p>Optimizan validaciones de formularios, extracción de datos y formateo de texto rápido y eficiente.</p>
+                    </div>
+                    <div class="theory-box">
                         <h3>RegEx en JavaScript</h3>
-                        <p>Se crean de forma literal <code>/patron/</code> o mediante el objeto <code>new RegExp("patron")</code>. Se evalúan con métodos como <code>.test()</code> o <code>.match()</code>.</p>
+                        <p>Hacen uso de métodos integrados: <code>.test()</code> para verificar, <code>.match()</code> para extracción y <code>.exec()</code> para búsqueda iterativa.</p>
                     </div>
-                    <div>
+                    <div class="theory-box">
                         <h3>Herramientas de Prueba</h3>
-                        <p>Para depurar patrones complejos, se utilizan herramientas interactivas como <strong>Regex101.com</strong> o <strong>RegExr.com</strong>.</p>
+                        <p>Plataformas como Regex101.com y RegExr.com son esenciales para visualizar explicaciones detalladas y ver coincidencias en tiempo real.</p>
                     </div>
                 </div>
             </section>
         </main>
+
+        <footer class="main-footer">
+            <p>Desarrollado para la materia de Investigación Aplicada — Universidad Don Bosco</p>
+        </footer>
     </div>
 
     <script src="script.js"></script>
